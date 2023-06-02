@@ -107,7 +107,7 @@ app.route("/articles/:articleTitle")
     res.send(err);
   }
 })
-app.delete('/articles/:articleTitle',async function(req, res) {
+.delete('/articles/:articleTitle',async function(req, res) {
   try {
     var a =await Article.deleteOne({ title: req.params.articleTitle });
     if(a){
